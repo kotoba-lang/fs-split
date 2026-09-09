@@ -5,7 +5,9 @@
   here is the DEFINITION, and this repo's deps.edn names exactly the
   definitions it reaches -- nothing else.
 "
-  (:require [kotoba.lang.text :as str]))
+  (:require [kotoba.lang.text :as str])
+  #?(:clj  (:require [kotoba.lang.text :as str])
+     :cljs (:require [kotoba.lang.text :as str])))
 
 (defn split
   "Split a path into its components. A leading '/' is preserved as the first
